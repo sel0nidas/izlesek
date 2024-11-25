@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A simple PWA app with a search page" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Search Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="searchForm">
+        <div style="display: flex; align-items: stretch; position: relative">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search video..."
+            autofocus
+          />
+          <button type="submit">Search</button>
+        </div>
+      </form>
+      <ul id="results"></ul>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
