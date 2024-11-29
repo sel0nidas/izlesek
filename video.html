@@ -26,9 +26,10 @@
     <script>
       const params = new URLSearchParams(window.location.search);
       const videoUrl = params.get("tmdbID");
+      const mediaType = params.get("mediaType");
       if (videoUrl) {
         document.getElementById("videoIframe").src =
-          "https://vidsrc.me/embed/movie?tmdb=" + videoUrl;
+          `https://vidsrc.me/embed/${mediaType}?tmdb=` + videoUrl;
       } else {
         document.body.innerHTML =
           '<p style="color: white; text-align: center;">Video not found</p>';
