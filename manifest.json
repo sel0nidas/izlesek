@@ -1,7 +1,7 @@
 {
   "name": "Video Search PWA",
   "short_name": "VideoSearch",
-  "start_url": "/index.html",
+  "start_url": "https://izlesek.vercel.app/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#007bff",
