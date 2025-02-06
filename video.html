@@ -23,11 +23,11 @@
   <body>
     <iframe
       id="videoIframe"
+      src="https://vidsrc.to/embed/tv/tt0944947"
       frameborder="0"
       referrerpolicy="origin"
       autoplay="true"
       allowfullscreen
-      sandbox="allow-scripts allow-same-origin"
     ></iframe>
 
     <script>
@@ -37,19 +37,19 @@
           window.top.location.href = window.location.href;
         }
       });
-
+      //sandbox="allow-scripts allow-same-origin"
       observer.observe(document, { subtree: true, childList: true });
 
       const params = new URLSearchParams(window.location.search);
       const videoUrl = params.get("tmdbID");
       const mediaType = params.get("mediaType");
-      if (videoUrl) {
-        document.getElementById("videoIframe").src =
-          `https://vidsrc.me/embed/${mediaType}?tmdb=` + videoUrl;
-      } else {
-        document.body.innerHTML =
-          '<p style="color: white; text-align: center;">Video not found</p>';
-      }
+      // if (videoUrl) {
+      //   document.getElementById("videoIframe").src =
+      //     "https://vidsrc.to/embed/movie/299536"; //`https://vidsrc.me/embed/${mediaType}?tmdb=` + videoUrl;
+      // } else {
+      //   document.body.innerHTML =
+      //     '<p style="color: white; text-align: center;">Video not found</p>';
+      // }
     </script>
   </body>
 </html>
